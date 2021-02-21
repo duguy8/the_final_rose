@@ -1,3 +1,6 @@
 <% name.each do |contestant| %>
-  <p><%= contestant.name %></p>
+  <div id="contestant-<%= contestant.id %>">
+  <p><%= link_to "#{contestant.name}", contestant_path(contestant.id) %></p>
+  <p><%= contestant.age %></p>
+  <p><%= contestant.hometown %></p>
 <% end %>
