@@ -3,12 +3,10 @@ Rails.application.routes.draw do
 
   #bachelorettes
   resources :bachelorettes, only: [:show] do
+    #bachelorettes/contestants
     resources :contestants, only: [:index]
   end
 
-  #contestants
-  resources :contestants, only: [:show]
-
-  #outings
-  resources :outings, only: [:show]
+  #contestants & outings
+  resources :contestants, :outings, only: [:show]
 end
