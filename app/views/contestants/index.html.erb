@@ -1,2 +1,3 @@
 <h1> <%= @bachelorette.name  %> Contestants: </h1>
 <%= render partial: 'contestants', locals: { name: @bachelorette.contestants } %>
+<h3>These Contestants are from these hometowns: <%= @bachelorette.unique_hometowns %> </h3>
