@@ -1,0 +1,4 @@
+<% outings.each do |outing| %>
+  <div id="outing-<%= outing.id %>">
+  <p> <%= link_to "#{outing.name}", outing_path(outing.id) %> </p>
+<% end %>

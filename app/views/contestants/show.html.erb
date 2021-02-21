@@ -1,3 +1,5 @@
 <h1> <%= @contestant.name %> </h1>
 <h3> <%= @contestant.age %> </h3>
 <h3> <%= @contestant.hometown %> </h3>
+<h3>Was on Season: <%= @contestant.bachelorette.season_number %> Oh no, this was the most dramatic season!</h3>
+<%= render partial: 'outings', locals: { outings: @contestant.outings } %>
